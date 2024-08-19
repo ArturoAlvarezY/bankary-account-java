@@ -9,7 +9,10 @@ Comisión mensual con valor inicial cero, de tipo float.
 La clase Cuenta tiene un constructor que inicializa los atributos saldo y tasa anual con valores pasados como parámetros. La clase Cuenta tiene los siguientes métodos:
 
 Consignar una cantidad de dinero en la cuenta actualizando su saldo.
-Retirar una cantidad de dinero en la cuenta actualizando su saldo. El valor a retirar no debe superar el saldo.
+
+Retirar una cantidad de dinero en la cuenta actualizando su saldo.
+
+ El valor a retirar no debe superar el saldo.
 Calcular el interés mensual de la cuenta y actualiza el saldo correspondiente.
 Extracto mensual: actualiza el saldo restándole la comisión mensual y calculando el interés mensual correspondiente (invoca el método anterior).
 Imprimir: retorno los valores de los atributos.
