@@ -69,6 +69,27 @@ public class BankAccount {
         return this.balance;
     }
 
+    public Float withdrawCash(Float quantity){
+
+        if (quantity > this.balance) {
+        System.out.println("Insufficient Balance");
+        return this.balance;
+        }
+        
+        if (quantity > 0) {
+        this.balance -= quantity;
+        return this.balance;
+        }
+
+        if (quantity < 0){
+            System.out.println("do you want negative money?");
+            return null;
+        }
+
+        System.out.println("You have to select a quantity greather than 0");
+        return this.balance;
+    }
+
  
 
 
