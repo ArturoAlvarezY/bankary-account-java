@@ -1,12 +1,11 @@
 package dev.arturo.models;
 
 public class SavingAccount extends BankAccount{
-
+    
     private boolean isActive;
 
-    public SavingAccount(Float balance, Integer consignmentsNumbers, Integer bankWithdrawals,
-            Float annualRatePercentage, Float monthlyCommission, boolean isActive) {
-        super(balance, consignmentsNumbers, bankWithdrawals, annualRatePercentage, monthlyCommission);
+    public SavingAccount(Float balance, Float annualRatePercentage, Float monthlyCommission, boolean isActive) {
+        super(balance, 0, 0, annualRatePercentage, monthlyCommission);
         this.isActive = isActive;
     }
 
@@ -18,11 +17,21 @@ public class SavingAccount extends BankAccount{
         this.isActive = isActive;
     }
 
-    public boolean activeOrInactive(){
+    public Boolean accountStatus() {
         if (isActive == false) {
-            this.isActive = false;
+            return false;
         }
-        return this.isActive=true;
+        return true;
     }
-    
+
+    public Boolean comprobateFunds(BankAccount bankAccount){
+        if (!isActive) {
+            return null;
+        }
+
+        if (getBalance() >= 10000) {
+        return this.isActive = true;           
+        }
+        return false;
+    }
 }
