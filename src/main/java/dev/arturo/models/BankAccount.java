@@ -97,12 +97,20 @@ public class BankAccount {
             monthlyInterest = 0f;
         }
 
-        this.balance += monthlyInterest;
         return monthlyInterest;
     }
 
+    public Float monthlyStatement(){
+
+        Float balanceAfterInterest = calcMonthlyInterest() - this.balance;
+
+        return this.balance = balanceAfterInterest;
+    }
+
+    @Override
+    public String toString() {
+        return "balance" + " " + balance + ", " + "Consignments Numbers" + " " + consignmentsNumbers + ", " + "bankWithdrawals" + " " + bankWithdrawals + ", " + "annualRatePercentage" + " " + annualRatePercentage + " , " + "monthlyCommission" + " " + monthlyCommission;
+    }
+
  
-
-
-  
 }

@@ -77,4 +77,11 @@ public class BankAccountTest {
         assertThat(bankAccount.calcMonthlyInterest(), is(1f));
     }
 
+    @Test
+    void testMonthlyStatement(){
+        bankAccount.setAnnualRatePercentage(12f);
+        bankAccount.setBalance(1f);
+        assertThat(bankAccount.monthlyStatement(), is(0f));
+    }
+
 }
