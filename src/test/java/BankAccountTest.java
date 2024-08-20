@@ -64,6 +64,17 @@ public class BankAccountTest {
     assertThat(bankAccount.withdrawCash(-1F), is(nullValue()));
 }
 
+    @Test
+    void testIfCalcMonthlyInterestIsEqualThanZeroReturnZero(){
+        bankAccount.setAnnualRatePercentage(0f);
+        assertThat(bankAccount.calcMonthlyInterest(), is(0F));
+    }
 
+    @Test
+    void testCalcMonthlyInterest(){
+        bankAccount.setAnnualRatePercentage(12f);
+        bankAccount.setBalance(1f);
+        assertThat(bankAccount.calcMonthlyInterest(), is(1f));
+    }
 
 }

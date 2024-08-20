@@ -90,6 +90,17 @@ public class BankAccount {
         return this.balance;
     }
 
+    public Float calcMonthlyInterest() {
+        Float monthlyInterest  = (this.annualRatePercentage/12)*this.balance;
+
+        if (this.annualRatePercentage <= 0) {
+            monthlyInterest = 0f;
+        }
+
+        this.balance += monthlyInterest;
+        return monthlyInterest;
+    }
+
  
 
 
