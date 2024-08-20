@@ -21,7 +21,9 @@ Imprimir: retorno los valores de los atributos.
 
 La clase Cuenta tiene dos clases hijas:
 
-Cuenta de ahorros: posee un atributo para determinar si la cuenta de ahorros está activa (tipo boolean). Si el saldo es menor a $10000, la cuenta está inactiva, en caso contrario se considera activa. Los siguientes métodos se redefinen:
+Cuenta de ahorros: 
+
+posee un atributo para determinar si la cuenta de ahorros está activa (tipo boolean). Si el saldo es menor a $10000, la cuenta está inactiva, en caso contrario se considera activa. Los siguientes métodos se redefinen:
 
 Consignar: se puede consignar dinero si la cuenta está activa. Debe invocar al método heredado.
 
