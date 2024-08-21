@@ -67,6 +67,8 @@ public class SavingAccount extends BankAccount {
 
         this.setBalance(actualBalance);
 
+        this.setConsignmentsNumbers(getConsignmentsNumbers() + 1);
+
         return this.getBalance();
     }
 
@@ -93,6 +95,11 @@ public class SavingAccount extends BankAccount {
         }
 
         return balanceAfterMonthlyInterest;
+    }
+
+    @Override
+    public String toString(){
+        return "balance" + " " + getBalance() + ", " + "Consignments Numbers" + " " + getConsignmentsNumbers() + ", " + "bankWithdrawals" + " " + getBankWithdrawals() + ", " + "annualRatePercentage" + " " + getAnnualRatePercentage() + " , " + "monthlyCommission" + " " + getMonthlyCommission();
 
     }
 
