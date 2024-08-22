@@ -8,6 +8,8 @@ Captura de pantalla de la sección testing de VSCode que muestre que se ha compl
 
 ![alt text](image.png)
 
+https://app.diagrams.net/?src=about#G17Y82JCmQPe6WQdzgJxIu_-nxGe-z9n8d#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D
+
 
 
 
