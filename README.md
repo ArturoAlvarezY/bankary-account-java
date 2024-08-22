@@ -1,3 +1,17 @@
+Requisitos:
+Diagrama UML de clases
+Tests unitarios obligatorios (cobertura mínima 70%)
+Entregables:
+Repositorio de Github
+Captura de pantalla del diagrama de clase o enlace público al archivo de diagrams.net
+Captura de pantalla de la sección testing de VSCode que muestre que se ha complido con la cobertura de tests
+
+![alt text](image.png)
+
+
+
+
+
 Desarrollar un programa que modele una cuenta bancaria que tiene los siguientes atributos, que deben ser de acceso protegido:
 
 Saldo, de tipo float.
@@ -54,10 +68,3 @@ Extracto mensual: invoca al método heredado.
 Un nuevo método imprimir que retorna el saldo de la cuenta, la comisión mensual, el número de transacciones realizadas (suma de cantidad de consignaciones y retiros) y el valor de sobregiro.
 
 
-Requisitos:
-Diagrama UML de clases
-Tests unitarios obligatorios (cobertura mínima 70%)
-Entregables:
-Repositorio de Github
-Captura de pantalla del diagrama de clase o enlace público al archivo de diagrams.net
-Captura de pantalla de la sección testing de VSCode que muestre que se ha complido con la cobertura de tests
