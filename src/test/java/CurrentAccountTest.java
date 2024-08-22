@@ -29,4 +29,27 @@ public class CurrentAccountTest {
     void testWithDrawCashIsNullIfTheQuantityParameterIsZero(){
         assertThat(currentAccount.withdrawCash(0f), is(nullValue()));
     }
+
+    @Test
+    void testOverdraftExtractMoneyOfTheConsign(){
+        currentAccount.setOverdraft(5);
+
+        assertThat(currentAccount.consign(4f), is(1f));
+        assertThat(currentAccount.getOverdraft(), is(1));
+    }
+
+    @Test
+    void testIfConsignParameterIsGreaterThanTheOverdraftTheRestantAmountIsGonnaBeAdditionatedToTheBalance(){
+        currentAccount.setOverdraft(5);
+        currentAccount.setBalance(0f);
+
+        currentAccount.consign(10f);
+
+        assertThat(currentAccount.getBalance(), is(5f));
+    }
+
+    @Test
+    void testIfConsignParameterIsEqualThanZeroReturnNull(){
+        assertThat(currentAccount.consign(0f), is(nullValue()));
+    }
 }
