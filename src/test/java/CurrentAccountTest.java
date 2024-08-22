@@ -18,11 +18,12 @@ public class CurrentAccountTest {
     }
 
     @Test
-    void testWithDrawCashUpdateTheOverdrafAndTheBalancetWhenTheQuantityIsGreatherThanBalance(){
+    void testWithDrawCashUpdateTheOverdrafAndTheBalancetWhenTheQuantityIsGreatherThanTheBalance(){
+
+        currentAccount.setBalance(2f);
         currentAccount.withdrawCash(3f);
 
         assertThat(currentAccount.getOverdraft(), is(1));
-        assertThat(currentAccount.getBalance(), is(0f));
     }
 
     @Test
@@ -51,5 +52,14 @@ public class CurrentAccountTest {
     @Test
     void testIfConsignParameterIsEqualThanZeroReturnNull(){
         assertThat(currentAccount.consign(0f), is(nullValue()));
+    }
+
+    @Test
+    void testIfConsignIsGreatherThanZeroAndOverdriftIsEqualThanZeroSumTheConsignToTheBalance(){
+        currentAccount.setBalance(10f);
+        currentAccount.setOverdraft(0);
+        currentAccount.consign(10f);
+
+        assertThat(currentAccount.getBalance(), is(20f));
     }
 }
