@@ -73,7 +73,15 @@ public class CurrentAccount extends BankAccount {
         }
         System.out.println("Your consign must be greather than 0");
         return null;
+    }
 
+    public Float calcMonthlyInterest() {
+        return null;
+    }
+
+    @Override
+    public String toString(){
+        return "balance" + " " + getBalance() + ", " + "Consignments Numbers" + " " + getConsignmentsNumbers() + ", " + "bankWithdrawals" + " " + getBankWithdrawals() + ", " + "annualRatePercentage" + " " + getAnnualRatePercentage() + " , " + "monthlyCommission" + " " + getMonthlyCommission();
     }
 
 }
