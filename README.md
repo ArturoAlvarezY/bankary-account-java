@@ -41,7 +41,9 @@ Un nuevo método imprimir que retorna el saldo de la cuenta, la comisión mensua
 
 
 
-Cuenta corriente: posee un atributo de sobregiro, el cual se inicializa en cero. Se redefinen los siguientes métodos:
+Cuenta corriente: posee un atributo de sobregiro, el cual se inicializa en cero. 
+
+Se redefinen los siguientes métodos:
 
 Retirar: se retira dinero de la cuenta actualizando su saldo. Se puede retirar dinero superior al saldo. El dinero que se debe queda como sobregiro.
 
